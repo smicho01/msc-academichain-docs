@@ -1,0 +1,24 @@
+name: Deploy to Web Hosting
+
+on:
+  push:
+    branches:
+      - main  # Trigger deployment on push to main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Upload files via FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ftp://severinu.com
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./  # The local directory to deploy, `./` means all files
+          server-dir: /docs-academichain.co.uk/  # The remote directory to deploy to
+
