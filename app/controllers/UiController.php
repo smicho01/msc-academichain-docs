@@ -1,7 +1,7 @@
 <?php
 $VIEW = isset($VIEW) ? $VIEW : 'index';
 
-$_SESSION['accordionSession'] = 'architecture';
+$_SESSION['accordionSession'] = 'ui';
 
 
 switch ($VIEW) {

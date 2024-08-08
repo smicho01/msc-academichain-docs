@@ -23,18 +23,20 @@
           </h6> -->
 
           <div class="accordion" id="accordionExample">
-              <div class="accordion-item">
+              
+          
+          <div class="accordion-item">
                   <h2 class="accordion-header" id="headingOne">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                      <button class="accordion-button <?php echo isAccordionSession("architecture") ? "" : "collapsed";?>" type="button" data-bs-toggle="collapse"
                           data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                           Architecture
                       </button>
                   </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                  <div id="collapseOne" class="accordion-collapse collapse <?php echo isAccordionSession("architecture") ? "show" : '';?>" aria-labelledby="headingOne"
                       data-bs-parent="#accordionExample">
                       <div class="accordion-body">
                           <ul class="list-group list-group-flush">
-                              <li class="list-group-item"><a href=?c=architecture&v=logical-diagram>Logical Diagram</a></li>
+                              <li class="list-group-item"><a href="?c=architecture&v=logical-diagram">Logical Diagram</a></li>
                               <li class="list-group-item"><a href="?c=architecture&v=physical-diagram">Physical Diagram</a></li>
                               <li class="list-group-item"><a href="?c=architecture&v=api-sequence-diagram">API Sequence Diagrams</a></li>
                           </ul>
@@ -44,18 +46,18 @@
 
               <div class="accordion-item">
                   <h2 class="accordion-header" id="headingTwo">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                          data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <button class="accordion-button <?php echo isAccordionSession("blockchain") ? "" : "collapsed";?>" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                             Blockchain
                       </button>
                   </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                  <div id="collapseTwo" class="accordion-collapse collapse <?php echo isAccordionSession("blockchain") ? "show" : '';?>" aria-labelledby="headingTwo"
                       data-bs-parent="#accordionExample">
                       <div class="accordion-body">
                           <ul class="list-group list-group-flush">
-                              <li class="list-group-item"><a href="">Motivation</a></li>
-                              <li class="list-group-item"><a href="">Logical Diagram</a></li>
-                              <li class="list-group-item"><a href="">API Endpoints</a></li>
+                              <li class="list-group-item"><a href="?c=blockchain&v=motivation">Motivation</a></li>
+                              <li class="list-group-item"><a href="?c=blockchain&v=logical-diagram">Logical Diagram</a></li>
+                              <li class="list-group-item"><a href="?c=blockchain&v=api-endpoints">API Endpoints</a></li>
                           </ul>
                       </div>
                   </div>
@@ -63,18 +65,17 @@
 
               <div class="accordion-item">
                   <h2 class="accordion-header" id="headingTwo">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      <button class="accordion-button <?php echo isAccordionSession("ui") ? "" : "collapsed";?>" type="button" data-bs-toggle="collapse"
                           data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                           User Interface
                       </button>
                   </h2>
-                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                  <div id="collapseThree" class="accordion-collapse collapse <?php echo isAccordionSession("ui") ? "show" : '';?>" aria-labelledby="headingThree"
                       data-bs-parent="#accordionExample">
                       <div class="accordion-body">
                           <ul class="list-group list-group-flush">
-                              <li class="list-group-item"><a href="">Logical Diagram</a></li>
-                              <li class="list-group-item"><a href="">Physical Diagram</a></li>
-                              <li class="list-group-item"><a href="">API Sequence Diagrams</a></li>
+                              <li class="list-group-item"><a href="?c=ui&v=framework">UI Framework</a></li>
+                              <li class="list-group-item"><a href="?c=ui&v=session">Session Control</a></li>
                           </ul>
                       </div>
                   </div>

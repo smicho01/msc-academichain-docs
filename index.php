@@ -1,5 +1,6 @@
 <?php
 include_once('init.php');
+session_start();
 
 /* Intercept controller and view name from the URL */
 $CONTROLLER = isset($_GET['c']) ? $_GET['c'] : 'index';
@@ -37,4 +38,9 @@ function get_variable_content($file, $variable_name) {
     } else {
         return null;
     }
+}
+
+
+function isAccordionSession($sessionVarNameValue) {
+    return isset($_SESSION['accordionSession']) && $_SESSION['accordionSession'] == $sessionVarNameValue;
 }
