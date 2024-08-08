@@ -53,9 +53,9 @@
                       data-bs-parent="#accordionExample">
                       <div class="accordion-body">
                           <ul class="list-group list-group-flush">
+                              <li class="list-group-item"><a href="">Motivation</a></li>
                               <li class="list-group-item"><a href="">Logical Diagram</a></li>
-                              <li class="list-group-item"><a href="">Physical Diagram</a></li>
-                              <li class="list-group-item"><a href="">API Sequence Diagrams</a></li>
+                              <li class="list-group-item"><a href="">API Endpoints</a></li>
                           </ul>
                       </div>
                   </div>
